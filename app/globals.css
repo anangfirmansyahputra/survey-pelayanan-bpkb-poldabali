@@ -16,6 +16,18 @@
   }
 }
 
+.custom-text {
+  -webkit-text-stroke: 2px #131313;
+  letter-spacing: 2%;
+  line-height: 140%
+}
+
+.custom-text-white {
+  /* -webkit-text-stroke: 1px #fff; */
+  letter-spacing: 2%;
+  line-height: 120%
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
