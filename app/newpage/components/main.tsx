@@ -5,7 +5,6 @@ import { Montserrat, Oswald } from "next/font/google";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import Footer from "./footer";
-import LoginComponent from "./login";
 
 const inter = Oswald({
   subsets: ["latin"],
@@ -156,12 +155,9 @@ export default function Main() {
           </div>
         </section>
       ) : (
-        <main className="flex flex-col w-full h-screen bg-white">
-          {/* <header className="py-10 text-center">
-        <h1 className="text-4xl font-bold">Kantor Pelayanan BPKB</h1>
-      </header> */}
+        <main className="flex flex-col w-full h-screen bg-[url('/img/header.png')] bg-white bg-contain bg-no-repeat">
           <div className="w-full relative flex items-center justify-center">
-            <img src="/img/header.png" className="w-full" />
+            {/* <img src="/img/header.png" className="w-full" /> */}
             <div className="px-[40px] pt-[48px] absolute top-0 left-0">
               <div className="flex">
                 <img src="/img/Frame 9.png" alt="" />
@@ -175,17 +171,9 @@ export default function Main() {
                 DIREKTORAT LALU LINTAS POLDA BALI
               </h2>
             </div>
-            <div className="mx-auto absolute bottom-[30px]">
-              <div className="flex h-[150px] items-center w-[813px] justify-center relative bg-[url('/img/ribon.svg')] bg-cover">
-                <h2 className="text-white font-medium w-[400px] text-center text-3xl">
-                  BAGAIMANA DENGAN PELAYANAN KAMI?
-                </h2>
-              </div>
-            </div>
           </div>
-
           {success ? (
-            <div className="flex-1 items-center mt-4 mx-auto justify-center space-y-5 ">
+            <div className="flex-1 flex flex-col mt-32 items-center  mx-auto justify-center space-y-5 ">
               <img src="/img/success.svg" className=" mx-auto" />
               <h5 className="text-[30px] leading-[120%] tracking-[2%] font-bold text-center">
                 TERKIRIM
@@ -195,7 +183,15 @@ export default function Main() {
               </p>
             </div>
           ) : (
-            <div className="flex-1 items-center mt-8 flex flex-col">
+            <div className="flex-1 gap-10 mt-32 items-center flex flex-col justify-center">
+              <div className="mx-auto bottom-[30px]">
+                <div className="flex h-[150px] items-center w-[813px] justify-center relative bg-[url('/img/ribon.svg')] bg-cover">
+                  <h2 className="text-white font-medium w-[400px] text-center text-3xl">
+                    BAGAIMANA DENGAN PELAYANAN KAMI?
+                  </h2>
+                </div>
+              </div>
+
               <div className="flex justify-center items-center gap-10">
                 {items.map((item) => (
                   <div
