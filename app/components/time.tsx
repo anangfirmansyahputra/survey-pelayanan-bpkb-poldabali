@@ -8,7 +8,7 @@ export default function Time() {
 
   useEffect(() => {
     const intervalID = setInterval(() => {
-      const dateObject = addHours(new Date(), 1); // Menambahkan 1 jam ke waktu sekarang
+      const dateObject = new Date(); // Menambahkan 1 jam ke waktu sekarang
 
       const formattedDate = format(dateObject, "EEEE, d MMMM y, HH:mm:ss", {
         locale: id,
