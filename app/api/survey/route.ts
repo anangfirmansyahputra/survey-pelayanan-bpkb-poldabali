@@ -5,7 +5,7 @@ export async function POST(request: Request, res: Response) {
   try {
     const { kepuasan } = await request.json();
 
-    const { error } = await supabase.from("users").insert({ kepuasan });
+    const { error } = await supabase.from("pelanggan").insert({ kepuasan });
 
     if (error) {
       return NextResponse.json(
